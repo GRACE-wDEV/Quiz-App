@@ -1,0 +1,13 @@
+{
+  "name": "quiz-app",
+  "version": "1.0.0",
+  "description": "Interactive Quiz Application",
+  "scripts": {
+    "build-css": "tailwindcss -i ./index.css -o ./dist/output.css --watch",
+    "build": "tailwindcss -i ./index.css -o ./dist/output.css",
+    "dev": "tailwindcss -i ./index.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.1.11"
+  }
+}
