@@ -1,12 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Delius&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
-
-body
-{
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Delius", cursive;
-  background-color: #0f172a;
+  transition: all .3s;
+}
+body.dark
+{
+  .app{
+    background-color: #000;
+  }
+  .app .title{
+    background-color: #000;
+    color: #fff;
+  }
+  h2{
+    color: #fff;
+  }
+  #answer-buttons
+  {
+    color: #fff;
+  }
+  #answer-buttons button
+  {
+    background-color: #121212;
+    border-color: #999;
+  }
+  #answer-buttons button.correct
+  {
+    background-color: rgba(0, 128, 0,1);
+  }
+  #answer-buttons button.incorrect
+  {
+    background-color: rgba(255, 0, 0, .75);
+  }
+  #next-button
+  {
+    background-color: #121212;
+    border-color: #999;
+  }
+  #next-button:hover
+  {
+    background-color: #000;
+  }
+  .app .title button
+  {
+    color: #fff;
+  }
 }
 
 .pattern
@@ -30,34 +71,56 @@ body
   color: white;
   display: flex;
   flex-direction: column;
+  /* padding: 100px; */
+  height: 100vh;
+  justify-content: center;
 }
 
 .app
 {
   background-color: #fff;
   color: black;
-  max-width: 650px;
+  max-width: 600px;
+  min-height: 600px;
   width: 90%;
   padding: 40px;
   border-radius: 10px;
   margin-inline: auto;
   box-shadow: 0 5px 10px -1px rgba(0,0,0,.1);
 }
-
-.app h1
+.app .title
 {
-  padding: 0 0 30px;
+  padding: 0 0 30px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
   margin-bottom: 20px;
+  align-items: center;
+  position: relative;
+  background-color: #fff;
+}
+
+.app .title h1
+{
   font-size: 2rem;
   font-weight: bold;
-  color: black;
-  border-bottom: 1px solid gray;
+  flex: 1;
 }
 
-.app .quiz
+.app .title button
 {
-  
+  padding: 20px 20px;
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  border-radius: 50%;
 }
+
+.app .title button span
+{
+  font-size: 2rem;
+}
+
 
 .app .quiz h2
 {
@@ -81,10 +144,15 @@ body
   transition: all .25s;
 }
 
-.app .quiz .btn:hover
+.app .quiz .btn:hover:not([disabled])
 {
   background-color: #000;
   color: #fff;
+}
+
+.app .quiz .btn:disabled
+{
+  cursor: no-drop;
 }
 
 #next-button
@@ -96,10 +164,20 @@ body
   display: block;
   margin: auto;
   margin-top: 50px;
+  border: 1px solid black;
   transition: all .3s;
 }
 
 #next-button:hover{
   background-color: #121212;
+}
+
+
+.correct{
+  background-color: #9aeabc;
+}
+
+.incorrect{
+  background-color: #ff9393;
 }
 

@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz App | igrace</title>
   <link rel="stylesheet" href="index.css">
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="Public/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=dark_mode" />
 </head>
-<body>
+<body class="dark">
   <div class="pattern"></div>
   <div class="wrapper">
     <div class="app">
-      <h1>Simple Quiz</h1>
-      
+      <div class="title">
+        <h1>General Quiz</h1>
+        <button id="toggleDarkMode" onclick="console.log('clicked')">
+          <span class="material-symbols-outlined">dark_mode</span>
+        </button>
+      </div>
       <div class="quiz">
         <h2 id="question">Question Goes Here</h2>
         <div id="answer-buttons">
